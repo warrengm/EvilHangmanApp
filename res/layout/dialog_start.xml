@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- The dialog to appear when start is pressed in the main menu -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:padding="16dp" >
+
+    <TextView
+        android:id="@+id/radio_difficulty_prompt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/word_difficulty"
+        android:textColor="@color/white"
+        android:textStyle="italic" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_difficulties"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radio_difficulty_prompt"
+        android:textColor="@color/white"
+        android:layout_marginBottom="10dp" >
+
+        <RadioButton
+            android:id="@+id/radio_easy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/easy" />
+
+        <RadioButton
+            android:id="@+id/radio_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textColor="@color/white"
+            android:text="@string/medium" />
+
+        <RadioButton
+            android:id="@+id/radio_hard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/hard" />
+
+        <RadioButton
+            android:id="@+id/radio_very_hard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="@string/very_hard" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/wordLength_seekBar_prompt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup_difficulties"
+        android:text="@string/word_length"
+        android:textColor="@color/white"
+        android:textStyle="italic" />
+
+    <SeekBar
+        android:id="@+id/wordLength_seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wordLength_seekBar_prompt"
+        android:max="25" />
+
+    <TextView
+        android:id="@+id/wordLength_seekBar_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wordLength_seekBar"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/numOfGuesses_seekBar_prompt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wordLength_seekBar_value"
+        android:text="@string/num_of_guesses"
+        android:textColor="@color/white"
+        android:textStyle="italic" />
+
+    <SeekBar
+        android:id="@+id/numOfGuesses_seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numOfGuesses_seekBar_prompt"
+        android:max="26" />
+
+    <TextView
+        android:id="@+id/numOfGuesses_seekBar_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numOfGuesses_seekBar"
+        android:layout_centerHorizontal="true"
+        android:text=""
+        android:textColor="@color/white" />
+    
+     <View
+        android:id="@+id/divider1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/numOfGuesses_seekBar_value"
+        android:layout_marginTop="4dp"
+        android:background="@color/background_color" />
+
+      <TextView 
+         android:id="@+id/center"
+         android:layout_width="0dp"
+         android:layout_height="0dp"
+         android:layout_centerInParent="true" />
+    
+    <Button
+        android:id="@+id/dialogStart_play"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider1"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:text="@string/play" />
+
+</RelativeLayout>

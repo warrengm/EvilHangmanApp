@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Large Screens -->
+    <dimen name="key_width">55dp</dimen>
+    <dimen name="key_height">60dp</dimen>
+    <dimen name="key_text_size">26sp</dimen>
+    
+    
+</resources>

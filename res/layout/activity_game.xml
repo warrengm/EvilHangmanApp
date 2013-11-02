@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true" >
+
+    <com.gmail.warrengodonemaresca.evilhangman.GameSurfaceView
+        android:id="@+id/surface_game"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/text_output_game"
+        android:layout_below="@+id/text_guesses" />
+
+    <!-- Words and guesses -->
+
+    <TextView
+        android:id="@+id/text_guesses"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/background_color"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:text="@string/guesses_left"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <!-- Background Color -->
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignBottom="@+id/button_v"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/button_e"
+        android:background="@color/background_color" />
+
+    <!-- For alignment -->
+
+    <TextView
+        android:id="@+id/center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true" />
+
+    <!-- Hangman word output -->
+
+    <TextView
+        android:id="@+id/text_output_game"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/key_height"
+        android:layout_above="@+id/button_e"
+        android:background="@color/background_color"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/start"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size"
+        android:typeface="monospace" />
+
+    <!-- Letter Buttons -->
+
+    <Button
+        android:id="@+id/button_a"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignBottom="@+id/button_e"
+        android:layout_toLeftOf="@+id/button_b"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_a"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_b"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignBottom="@+id/button_e"
+        android:layout_toLeftOf="@+id/button_c"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_b"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_c"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignBottom="@+id/button_e"
+        android:layout_toLeftOf="@+id/button_d"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_c"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_d"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignBottom="@+id/button_e"
+        android:layout_toLeftOf="@+id/button_e"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_d"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <!-- The letter e button is the anchor for the top row of keys (A-I) -->
+
+    <Button
+        android:id="@+id/button_e"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_above="@+id/button_m"
+        android:layout_centerHorizontal="true"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_e"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_f"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignBottom="@+id/button_e"
+        android:layout_toRightOf="@+id/button_e"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_f"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_g"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignBottom="@+id/button_e"
+        android:layout_toRightOf="@+id/button_f"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_g"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_h"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignBottom="@+id/button_e"
+        android:layout_toRightOf="@+id/button_g"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_h"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_i"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignBottom="@+id/button_e"
+        android:layout_toRightOf="@+id/button_h"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_i"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_j"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignBottom="@+id/button_m"
+        android:layout_toLeftOf="@+id/button_k"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_j"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_k"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignBottom="@+id/button_m"
+        android:layout_toLeftOf="@+id/button_l"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_k"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_l"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignBottom="@+id/button_m"
+        android:layout_toLeftOf="@+id/button_m"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_l"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <!-- Button m serves as anchor for the middle row (J-Q) -->
+
+    <Button
+        android:id="@+id/button_m"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_above="@+id/button_v"
+        android:layout_toLeftOf="@+id/center"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_m"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_n"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignBottom="@+id/button_m"
+        android:layout_toRightOf="@+id/button_m"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_n"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_o"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignBottom="@+id/button_m"
+        android:layout_toRightOf="@+id/button_n"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_o"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_p"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignBottom="@+id/button_m"
+        android:layout_toRightOf="@+id/button_o"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_p"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_q"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignBottom="@+id/button_m"
+        android:layout_toRightOf="@+id/button_p"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_q"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_r"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/button_s"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_r"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_s"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/button_t"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_s"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_t"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/button_u"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_t"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_u"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/button_v"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_u"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <!-- The v button is used to align all buttons on the bottom row -->
+
+    <Button
+        android:id="@+id/button_v"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_v"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_w"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/button_v"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_w"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_x"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/button_w"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_x"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_y"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/button_x"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_y"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <Button
+        android:id="@+id/button_z"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="@dimen/key_width"
+        android:layout_height="@dimen/key_height"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/button_y"
+        android:minHeight="20dp"
+        android:minWidth="20dp"
+        android:padding="10dp"
+        android:text="@string/upper_z"
+        android:textColor="@color/white"
+        android:textSize="@dimen/key_text_size" />
+
+    <include
+        android:id="@+id/win_subview"
+        android:layout_margin="16dp"
+        layout="@layout/dialog_win"
+        android:visibility="gone"
+        android:layout_centerInParent="true" />
+    
+     <include
+        android:id="@+id/lose_subview"
+        android:layout_margin="16dp"
+        layout="@layout/dialog_lose"
+        android:visibility="gone"
+        android:layout_centerInParent="true" />
+
+    <fragment
+        android:id="@+id/fragment_options_game"
+        android:name="com.gmail.warrengodonemaresca.evilhangman.OptionsFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout="@layout/dialog_start"
+        tools:layout="@layout/dialog_start"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

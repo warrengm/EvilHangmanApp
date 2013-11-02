@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- xLarge (10 inche) Screens -->
+    <dimen name="key_width">85dp</dimen>
+    <dimen name="key_height">85dp</dimen>
+    <dimen name="key_text_size">36sp</dimen>
+
+</resources>

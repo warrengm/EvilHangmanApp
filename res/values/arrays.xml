@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="difficulty_prefs">
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
+        <item>Very Hard</item>
+    </string-array>
+    
+     <integer-array name="difficulty_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </integer-array>
+    
+    <string-array name="language_prefs">
+         <item>English</item>
+         <item>German</item>
+         <item>Italian</item>
+         <item>Spanish</item>
+     </string-array>
+    
+    <string-array name="language_values">
+         <item>English</item>
+         <item>Deutsch</item>
+         <item>Italiano</item>
+         <item>Español</item>
+     </string-array>
+    
+</resources>

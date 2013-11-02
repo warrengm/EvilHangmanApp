@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/gameplay_settings" >
+       <ListPreference
+            android:entries="@array/difficulty_prefs"
+            android:entryValues="@array/difficulty_values"
+            android:key="difficulty"
+            android:title="@string/difficulty" />
+
+        <EditTextPreference
+            android:defaultValue="7"
+            android:key="word_length"
+            android:maxLength="20"
+            android:numeric="integer"
+            android:summary="..."
+            android:title="@string/word_length" />
+        
+        <EditTextPreference
+            android:defaultValue="13"
+            android:key="num_of_guesses"
+            android:maxLength="26"
+            android:numeric="integer"
+            android:summary="..."
+            android:title="@string/num_of_guesses" />
+                    
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="@string/app_options" >
+        
+        
+        <ListPreference
+            android:defaultValue="English"
+            android:entries="@array/language_prefs"
+            android:entryValues="@array/language_values"
+            android:key="language"
+            android:title="@string/language" />
+    </PreferenceCategory>
+    
+    <EditTextPreference
+            android:defaultValue="0"
+            android:key="streak"
+            android:numeric="integer"
+            android:summary="..."
+            android:title="@string/streak" />
+
+</PreferenceScreen>

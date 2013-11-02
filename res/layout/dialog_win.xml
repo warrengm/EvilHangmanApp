@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:layout_centerInParent="true" >
+
+    <TextView
+        android:id="@+id/congratulations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:text="@string/win"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true" />
+    
+    <View
+        android:id="@+id/divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/congratulations"
+        android:background="@color/background_color" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/congratulations"
+        android:layout_below="@+id/divider"
+        android:layout_marginTop="8dp"
+        android:text="@string/score"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+    
+     <TextView
+        android:id="@+id/text_score_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/congratulations"
+        android:layout_below="@+id/divider"
+        android:layout_marginTop="8dp"
+        android:text="@string/plus_ten"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/guesses_bonus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/congratulations"
+        android:layout_below="@+id/score"
+        android:layout_marginTop="8dp"
+        android:text="@string/guesses_bonus"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+    
+    <TextView
+        android:id="@+id/text_guesses_bonus_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/congratulations"
+        android:layout_below="@+id/score"
+        android:layout_marginTop="8dp"
+        android:text="@string/plus_ten"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/difficulty_bonus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/congratulations"
+        android:layout_below="@+id/guesses_bonus"
+        android:layout_marginTop="8dp"
+        android:text="@string/difficulty_bonus"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+    
+    <TextView
+        android:id="@+id/text_difficulty_bonus_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/congratulations"
+        android:layout_below="@+id/guesses_bonus"
+        android:layout_marginTop="8dp"
+        android:text="@string/x_two"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/congratulations"
+        android:layout_below="@+id/difficulty_bonus"
+        android:layout_marginTop="8dp"
+        android:text="@string/total"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+    
+    <TextView
+        android:id="@+id/text_total_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/congratulations"
+        android:layout_below="@+id/difficulty_bonus"
+        android:layout_marginTop="8dp"
+        android:text="@string/total"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/streak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/congratulations"
+        android:layout_below="@+id/total"
+        android:layout_marginTop="8dp"
+        android:text="@string/streak"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+    
+    <TextView
+        android:id="@+id/text_streak_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/congratulations"
+        android:layout_below="@+id/total"
+        android:layout_marginTop="8dp"
+        android:text="@string/streak"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/streak"
+        android:layout_marginTop="8dp"
+        android:background="@color/background_color" />
+   
+     <Button
+        android:id="@+id/button_more_options"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/divider1"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:textColor="@color/white"
+        android:text="@string/more_options" />
+    
+    <Button
+        android:id="@+id/button_play_again"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@+id/center"
+        android:layout_below="@+id/button_more_options"
+        android:textColor="@color/white"
+        android:text="@string/play_again" />
+
+    <Button
+        android:id="@+id/button_main_menu"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/center"
+        android:layout_below="@+id/button_more_options"
+        android:textColor="@color/white"
+        android:text="@string/main_menu" />
+
+</RelativeLayout>
